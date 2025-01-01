@@ -1,0 +1,12 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+
+# Temporary or processed files
+temp.xlsx
+uploads/
+processed/processed_file.xlsx
