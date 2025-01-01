@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel File Uploader</title>
+    <title>Duplicate Report Formatter</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 </head>
 <body>
     <div class="container">
-        <h1>Excel File Uploader</h1>
+        <h1>Duplicate Report Formatter</h1>
         <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="fileInput" name="file" accept=".xlsx, .xls">
-            <button type="button" id="uploadButton">Upload</button>
+            <div class="file-upload-group">
+                <input type="file" id="fileInput" name="file" accept=".xlsx, .xls, .csv">
+                <button type="button" id="uploadButton">Upload</button>
+            </div>
         </form>
         <div id="progressContainer">
             <progress id="progressBar" value="0" max="100"></progress>
             <span id="progressText">0%</span>
         </div>
-        <button id="downloadButton" style="display:none;" disabled>Download Processed File</button>
+        <button id="downloadButton" style="display:none;" disabled>Download Report</button>
     </div>
     <script src="/static/script.js"></script>
 </body>
