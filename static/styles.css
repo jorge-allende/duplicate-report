@@ -1,33 +1,129 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #1e1e1e; /* Sleek dark background */
+    margin: 0;
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #292929; /* Slightly lighter gray */
+    padding: 40px 30px; /* Balanced padding for breathing space */
+    border-radius: 16px; /* Softer corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
     text-align: center;
+    color: #e0e0e0; /* Light gray text for better readability */
+    width: 400px; /* Fixed width for compact layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px; /* Even spacing between all elements */
+}
+
+h1 {
+    font-size: 22px; /* Balanced header size */
+    font-weight: 600;
+    color: #ffffff; /* Pure white for the header */
+    letter-spacing: 0.5px; /* Cleaner look */
+    margin: 0; /* Remove default margin */
+}
+
+.file-upload-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px; /* Even spacing between Choose File and Upload */
+    width: 100%; /* Full width alignment */
+}
+
+input[type="file"] {
+    background-color: #1e1e1e;
+    border: 1px solid #4a90e2; /* Solid border for simplicity */
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: #e0e0e0;
+    cursor: pointer;
+    text-align: center;
+    flex-grow: 1; /* Allow it to take up available space */
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #357abd; /* Subtle color change on hover */
+}
+
+button {
+    background-color: #4a90e2; /* Vibrant blue for active state */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px; /* Adjusted padding for compact layout */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px); /* Subtle hover effect */
+}
+
+/* Disabled Button */
+button.disabled,
+button:disabled {
+    background-color: #555; /* Gray for disabled state */
+    color: #ccc; /* Lighter gray for text */
+    cursor: not-allowed; /* Show disabled cursor */
 }
 
 #progressContainer {
-    margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 15px; /* Space between progress bar and percentage */
+    width: 100%; /* Full width alignment */
 }
 
 progress {
-    width: 100%;
-    height: 20px;
-    margin-right: 10px;
+    flex-grow: 1; /* Allow progress bar to stretch */
+    height: 12px; /* Slim progress bar */
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #444; /* Neutral background */
+}
+
+progress::-webkit-progress-bar {
+    background-color: #444;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4a90e2; /* Progress fill */
+    transition: width 0.3s ease;
+}
+
+progress::-moz-progress-bar {
+    background-color: #4a90e2;
+}
+
+#progressText {
+    font-size: 14px;
+    color: #e0e0e0; /* Match text color to theme */
 }
 
 #downloadButton {
-    margin-top: 20px;
+    background-color: #41bd43; /* Accent color */
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 25px; /* Increased padding for importance */
+    border-radius: 8px;
+    width: 80%; /* Consistent width */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#downloadButton:hover {
+    background-color: #3caf3e;
 }
