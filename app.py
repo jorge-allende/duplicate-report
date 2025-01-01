@@ -76,10 +76,10 @@ def process_excel(file_path, output_path):
         rule = Rule(type="expression", dxf=dxf, formula=[formula])
         ws.conditional_formatting.add(f"{col_letter}2:{col_letter}{ws.max_row}", rule)
 
-        # Step 14: Hide column E (Original File Name)
+        # Step 8: Hide column E (Original File Name)
         ws.column_dimensions['E'].hidden = True
 
-        # Step 15: Add 'Delete? (X)' in Column G and format it like other headers
+        # Step 9: Add 'Delete? (X)' in Column G and format it like other headers
         ws['G1'] = 'Delete? (X)'
         ws['G1'].font = ws['A1'].font.copy(bold=True)  # Match bold font style
         ws['G1'].alignment = ws['A1'].alignment.copy()  # Match alignment
